@@ -15,7 +15,7 @@ const TopNavbar = () => {
                 <Link to="employee" className="link">Employee</Link>
             </Nav.Item> */}
             <Nav.Item className="mx-2">
-                <Link to="checkout" className="link">Payment</Link>
+                <Link to="payment" className="link">Payment</Link>
             </Nav.Item>
         </Navbar>
     </>

@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/" element={ <Landing /> }></Route>
           <Route path="admin" element={ <AdminContainer pageTitle='Admin Page' /> }></Route>
           <Route path="employee" element={ <EmployeeContainer pageTitle='Employee Page'/> }></Route>
-          <Route path="checkout" element={ <Checkout {...checkoutDefaults} /> }></Route>
+          <Route path="payment" element={ <Checkout {...checkoutDefaults} /> }></Route>
         </Routes>
       {/* </Suspense> */}
       <Footer customClasses="fixed-bottom"></Footer>
