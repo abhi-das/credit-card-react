@@ -8,14 +8,14 @@ const TopNavbar = () => {
     return <>
         <Navbar bg="light" expand="lg" fixed="top">
             <Navbar.Brand className="mx-2"><Link to="/"><Logo /></Link></Navbar.Brand>
-            <Nav.Item className="mx-2">
+            {/* <Nav.Item className="mx-2">
                 <Link to="admin" className="link">Admin</Link>
             </Nav.Item>
             <Nav.Item className="mx-2">
                 <Link to="employee" className="link">Employee</Link>
-            </Nav.Item>
+            </Nav.Item> */}
             <Nav.Item className="mx-2">
-                <Link to="checkout" className="link">Checkout</Link>
+                <Link to="checkout" className="link">Payment</Link>
             </Nav.Item>
         </Navbar>
     </>
