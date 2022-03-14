@@ -1,4 +1,4 @@
-import { ApiFetchError } from "./common";
+import { ApiFetchError } from './common';
 
 interface Profile {
     name: string;
@@ -9,4 +9,4 @@ export type EmployeeState = {
     profile: Profile;
     loading: boolean;
     errors?: ApiFetchError;
-}
+};

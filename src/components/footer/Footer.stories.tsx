@@ -1,5 +1,5 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import Footer from ".";
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import Footer from '.';
 
 export default {
     component: Footer,
@@ -9,10 +9,8 @@ export default {
     },
 } as ComponentMeta<typeof Footer>;
 
-export const WithSticky: ComponentStory<typeof Footer> = () => (
-    <Footer/>
-)
+export const WithSticky: ComponentStory<typeof Footer> = () => <Footer />;
 
 export const WithOutSticky: ComponentStory<typeof Footer> = () => (
-    <Footer customClasses="fixed-bottom"/>
-)
+    <Footer customClasses="fixed-bottom" />
+);

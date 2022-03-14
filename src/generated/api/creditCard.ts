@@ -1,11 +1,10 @@
-
 export enum CardTypes {
     AMEX = 'AMEX',
     VISA = 'VISA',
-    JCB = 'JCB'
+    JCB = 'JCB',
 }
 
 export const ERROR_MESSAGES = {
     emptyCardNumber: 'No card number found!',
-    invalidCardNumber: 'Invalid card number'
-}
+    invalidCardNumber: 'Invalid card number',
+};
