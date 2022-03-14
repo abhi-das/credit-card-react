@@ -1,4 +1,4 @@
-import { ApiFetchError } from "./common";
+import { ApiFetchError } from './common';
 
 export interface Role {
     name: string;
@@ -8,4 +8,4 @@ export type AdminState = {
     loading: boolean;
     roles: Role[];
     errors?: ApiFetchError;
-}
+};

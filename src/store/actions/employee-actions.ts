@@ -1,12 +1,12 @@
-import { ActionType } from "./action-type";
+import { ActionType } from './action-type';
 
 const loadProfile = () => ({
- type: ActionType.LOAD_PROFILES
-})
+    type: ActionType.LOAD_PROFILES,
+});
 const loadProfileSuccess = () => ({
- type: ActionType.LOAD_PROFILE_SUCCESS
-})
+    type: ActionType.LOAD_PROFILE_SUCCESS,
+});
 const loadProfileFailure = () => ({
- type: ActionType.LOAD_PROFILE_FAILURE
-})
+    type: ActionType.LOAD_PROFILE_FAILURE,
+});
 export { loadProfile, loadProfileFailure, loadProfileSuccess };

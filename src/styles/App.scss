@@ -1,17 +1,17 @@
 .height-2 {
-  height: 2em;
+    height: 2em;
 }
 
 .height-min-20 {
-  min-height: 20em;
+    min-height: 20em;
 }
 
 .svg-container {
-  svg {
-    @extend .height-2;
-  }
+    svg {
+        @extend .height-2;
+    }
 }
 
 .mt-off-6 {
-  margin-top: 6em;
+    margin-top: 6em;
 }

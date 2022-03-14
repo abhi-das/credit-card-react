@@ -7,15 +7,15 @@ import configStore from './store/store';
 
 import { Provider } from 'react-redux';
 
-const localAppStore = configStore(); 
+const localAppStore = configStore();
 
 ReactDOM.render(
-  <Provider store={localAppStore}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Provider>,
-  document.getElementById('root')
+    <Provider store={localAppStore}>
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
+    </Provider>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
