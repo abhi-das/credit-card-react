@@ -11,8 +11,34 @@ export const getCardTypeByValue = (userInput: string, apiData: any) => {
     )[0];
 };
 
-export const cardFormatNumbers = (cardValue: string) => {
-    return cardValue.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
+let lastValue = '';
+let selectionStart = 0;
+let selectionEnd = 0;
+export const cardFormatNumbers = (cardValue: string, splitSize: number = 4): string => {
+    if(cardValue) {
+        // if (cardValue === lastValue) {return ''};
+       let caretPosition = selectionStart;
+       let sanitizedValue = cardValue.replace(/[^0-9]/gi, '');
+       let parts = [];
+
+       for (let i = 0, len = sanitizedValue.length; i < len; i += splitSize) {
+           parts.push(sanitizedValue.substring(i, i + splitSize));
+       }
+
+       for (let i = caretPosition - 1; i >= 0; i--) {
+           let c = cardValue[i];
+           if (c < '0' || c > '9') {
+               caretPosition--;
+           }
+       }
+       caretPosition += Math.floor(caretPosition / splitSize);
+
+       cardValue = lastValue = parts.join(' ');
+       selectionStart = selectionEnd = caretPosition;
+       return cardValue ;
+    }
+
+    return '';
 };
 
 export const removeSpaces = (value: string) => {
