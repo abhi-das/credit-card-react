@@ -58,7 +58,7 @@ const CardNumberInput = (props: CardNumberInputDefaultProps) => {
                     />
                 </div>
             </div>
-            {error && <p className="text-danger text-sm mt-2 fs-6">{error}</p>}
+            {error && <p className="text-danger text-sm mt-2 fs-6 field-error">{error}</p>}
         </>
     );
 };

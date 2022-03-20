@@ -13,7 +13,7 @@ const masterCardDefaultProps = {
     src: './assets/images/master-card.svg',
     alt: 'Master Card',
     classes: 'w-25',
-    icon: false,
+    icon: true,
 };
 
 export const MasterCard: ComponentStory<typeof CardImg> = () => (
@@ -24,7 +24,7 @@ const visaCardDefaultProps = {
     src: './assets/images/visa-card.svg',
     alt: 'Visa Card',
     classes: 'w-25',
-    icon: false,
+    icon: true,
 };
 
 export const VisaCard: ComponentStory<typeof CardImg> = () => (

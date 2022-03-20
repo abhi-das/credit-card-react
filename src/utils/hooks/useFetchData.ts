@@ -16,7 +16,7 @@ const useFetchData = (url: string, isSvg: boolean = false) => {
                 data = await resp?.data;
             } else {
                 data = await resp?.data?.data;
-                data.map(
+                data?.map(
                     (res: any) =>
                         (res.regExFormat = cardIdentificationRegEx[res.id])
                 );
