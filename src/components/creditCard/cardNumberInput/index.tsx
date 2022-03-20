@@ -31,21 +31,21 @@ const CardNumberInput = (props: CardNumberInputDefaultProps) => {
             <div className="form-group">
                 <label
                     htmlFor="creditCardNumberField"
-                    className="sr-only text-muted"
+                    className="sr-only text-success"
                 >
                     {inputLabel}
                 </label>
-                <div className="input-group">
+                <div className="input-group cc-field-container">
                     {imgMeta && (
                         <div className="input-group-prepend">
-                            <div className="input-group-text">
+                            <div className="input-group-text border-0 bg-transparent">
                                 <CardImg {...imgMeta} />
                             </div>
                         </div>
                     )}
                     <input
                         type="tel"
-                        className="form-control"
+                        className="form-control border-0"
                         id="creditCardNumberField"
                         name="cardNumber"
                         aria-label={ariaLabel}

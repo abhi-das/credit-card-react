@@ -36,6 +36,10 @@ const CreditCard = (props: CreditCardDefaultProps) => {
     const updateImgMeta = (cardInfo?: any) => {
         if (cardInfo) {
             setImgMeta(getImageMeta(undefined, cardInfo.icon, cardInfo.id));
+        } else {
+            // Set Default Card Icon and clear field errors
+            setImgMeta(getImageMeta())
+            setFormErrors(null)
         }
     };
 
@@ -92,7 +96,7 @@ const CreditCard = (props: CreditCardDefaultProps) => {
             {!isApiDataLoading && (
                 <form noValidate onSubmit={onFormSubmitHandler}>
                     <CardNumberInput
-                        inputLabel="Card Number"
+                        inputLabel="Card number"
                         placeholderText="0000 0000 0000 0000"
                         cardTypes={props.cardTypes}
                         imgMeta={imgMeta}
@@ -102,7 +106,7 @@ const CreditCard = (props: CreditCardDefaultProps) => {
                         maxLength={19}
                         formattedValue={formatCardNumber}
                     />
-                    <div className="form-group mt-2">
+                    <div className="form-group mt-4">
                         <input
                             value={buttonLabel}
                             type="submit"
