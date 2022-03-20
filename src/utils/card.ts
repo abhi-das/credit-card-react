@@ -20,11 +20,11 @@ export const cardFormatNumbers = (cardValue: string, splitSize: number = 4): str
        let caretPosition = selectionStart;
        let sanitizedValue = cardValue.replace(/[^0-9]/gi, '');
        let parts = [];
-
+       
        for (let i = 0, len = sanitizedValue.length; i < len; i += splitSize) {
            parts.push(sanitizedValue.substring(i, i + splitSize));
        }
-
+       
        for (let i = caretPosition - 1; i >= 0; i--) {
            let c = cardValue[i];
            if (c < '0' || c > '9') {
@@ -32,7 +32,7 @@ export const cardFormatNumbers = (cardValue: string, splitSize: number = 4): str
            }
        }
        caretPosition += Math.floor(caretPosition / splitSize);
-
+       
        cardValue = lastValue = parts.join(' ');
        selectionStart = selectionEnd = caretPosition;
        return cardValue ;
